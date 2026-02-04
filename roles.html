@@ -2,14 +2,17 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
+    <title>GREED – L'Equipe</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Greed - Dark Fantasy RPG</title>
+
+    <!-- Polices -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --bg-dark: #0b0b0f;
+            --bg-dark: #0b0b0f; /* Slightly bluer black */
             --bg-stone: #1e1e24;
             --accent-blood: #8a1c1c;
             --accent-gold: #cfa852;
@@ -33,6 +36,7 @@
             font-size: 1.3rem;
             line-height: 1.5;
             image-rendering: pixelated;
+            /* Dungeon floor pattern */
             background-image: 
                 linear-gradient(335deg, rgba(0,0,0,0.4) 23px, transparent 23px),
                 linear-gradient(155deg, rgba(0,0,0,0.4) 23px, transparent 23px),
@@ -41,6 +45,7 @@
             background-size: 58px 58px;
         }
 
+        /* Global Vignette */
         body::before {
             content: "";
             position: fixed;
@@ -71,9 +76,11 @@
         .logo {
             font-size: 2.2rem;
             font-family: 'Press Start 2P', cursive;
+            /* Gradient from Moonlight to Midnight Blue */
             background: linear-gradient(to bottom, #e0f7fa 0%, #4facfe 40%, #00008b 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            /* Drop shadow to make it pop against black */
             filter: drop-shadow(0 0 8px rgba(79, 172, 254, 0.6));
             position: relative;
             letter-spacing: -2px;
@@ -132,6 +139,7 @@
         .hero h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
+            /* Main Title Style Matches Header but bigger */
             background: linear-gradient(to bottom, #fff 0%, #4facfe 50%, #191970 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -179,7 +187,6 @@
         }
 
         .btn {
-            display: inline-block;
             background-color: #191970;
             color: #fff;
             font-family: 'Press Start 2P', cursive;
@@ -239,6 +246,7 @@
             height: 200%;
             position: absolute;
             top: -50%; left: -50%;
+            /* Darker, night-time grid */
             background-image: 
                 linear-gradient(30deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
                 linear-gradient(150deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
@@ -351,152 +359,74 @@
         }
     </style>
 </head>
+
 <body>
 
 <header>
-    <div class="logo">Greed</div>
-    <div style="display: none; color: white; font-size: 1.5rem;" class="mobile-nav">☰</div>
+    <div class="logo">GREED</div>
+
     <nav>
         <ul>
-            <li><a href="#lore">HISTOIRE</a></li>
-            <li><a href="#gameplay">MÉCANIQUES</a></li>
-            <li><a href="#dev">ÉQUIPE</a></li>
+            <li><a href="index.html#dev">RETOUR</a></li>
         </ul>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>Greed</h1>
-    <div class="subtitle">PROJET ANNUEL S1-S2 • EPITA 2030</div>
-    <div class="rpg-dialog">
-        <span id="typewriter"></span><span class="cursor"></span>
-    </div>
-    <a href="#lore" class="btn">COMMENCER L'AVENTURE</a>
-</section>
-
-<section id="lore">
+<section>
     <div style="text-align: center;">
-        <h2 class="section-header">Le Monde d'Après</h2>
+        <h2 class="section-header">Les Rôles</h2>
+        <p style="color:#6a8caf; font-size:0.9rem; margin-top:1rem;">
+            Chaque survivant a un rôle. Chaque rôle maintient la flamme.
+        </p>
     </div>
-    <div class="lore-container">
-        <div class="mockup-window">
-            <div class="iso-grid"></div>
-            <div style="position: absolute; top: 40%; left: 40%; width: 30px; height: 40px; background: #4facfe; box-shadow: 2px 2px 0 #000; border: 1px solid #fff;"></div>
-            <div style="position: absolute; top: 35%; left: 55%; width: 24px; height: 24px; background: #300; border: 1px solid #f00; box-shadow: 2px 2px 0 #000;"></div>
-            <div style="position: absolute; bottom: 10px; left: 10px; color: #aaa; font-size: 0.7rem; font-family: 'VT323';">Preversion v0.4.2</div>
-        </div>
-        <div>
-            <p style="color: #aaa; margin-bottom: 1rem;">Le seigneur n'est pas revenu de sa quête dans son état normal ... Désormais il détruit tout dans l'objectif de s'enrichir.</p>
-            <p style="color: #dcdcdc;">Dans <strong style="color: #4facfe;">Greed</strong>, bâtissez une lumière dans les ténèbres. Explorez des donjons en ruines, affrontez ce qui rôde dans l'ombre et reconstruisez une société sur les cendres de l'ancienne.</p>
-            <br>
-            <ul style="list-style: none; padding-left: 1rem; border-left: 3px solid #191970;">
-                <li style="margin-bottom: 0.8rem;">🌑 Cycle Jour/Nuit dynamique</li>
-                <li style="margin-bottom: 0.8rem;">🏰 Gestion de colonie survie</li>
-                <li>⚔️ Exploration isométrique</li>
-            </ul>
-        </div>
-    </div>
-</section>
 
-<section id="gameplay">
-    <div style="text-align: center;">
-        <h2 class="section-header">Système de Jeu</h2>
-    </div>
-    <div class="features-grid">
-        <div class="card">
-            <span class="card-icon">🗝️</span>
-            <h3>Exploration</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Des donjons générés procéduralement. Chaque descente est une nouvelle épreuve où la carte est votre meilleure alliée.</p>
-        </div>
-        <div class="card">
-            <span class="card-icon">💎</span>
-            <h3>Ressources</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Collectez du fer et de l'or pour reconstruire le village et éspérer sauver le seigneur.</p>
-        </div>
-        <div class="card">
-            <span class="card-icon">🏗️</span>
-            <h3>Construction</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Reconstruisez un village pour vous améliorer vous et vos armes. Votre base est votre hub central, protégez-la à tout prix.</p>
-        </div>
-        <div class="card">
-            <span class="card-icon">🔮</span>
-            <h3>Évolution</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Faites évoluer le niveau de votre personnage pour découvrir un béstiaire riche et complet.</p>
-        </div>
-    </div>
-</section>
+    <div class="features-grid" style="margin-top:4rem;">
 
-<section id="dev" class="epita-badge">
-    <h3>PROMO 2030 - EPITA</h3>
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-        Projet de première année.<br>
-        Développé en python grace a pygame.
-    </p>
-    <div style="margin-top: 3rem; text-align: center;">
-            <a href="./roles.html" class="btn btn-secondary">EN SAVOIR PLUS</a>
+        <div class="card">
+            <span class="card-icon">🧠</span>
+            <h3>Chef de Projet/Lead Technique : DA COSTA Louis</h3>
+            <p style="font-size:0.9rem; color:#aaa;">
+                Supervise l’ensemble du projet. Définit les priorités,
+                coordonne l’équipe et garantit la cohérence globale du jeu. 
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="card-icon">💻</span>
+            <h3>Network Programmer : ABELAOUI Ghita</h3>
+            <p style="font-size:0.9rem; color:#aaa;">
+                Architecture du réseau, Gestion des serveurs, Optimisation et Bugfix concernant le système multijoueur. S'assure de la bienséance de l'expérience collaborative de Greed.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="card-icon">🎨</span>
+            <h3>Art & UI & UX: SELLAM Adam</h3>
+            <p style="font-size:0.9rem; color:#aaa;">
+                Définit l’identité audio-visuelle de Greed : sprites, interfaces,
+                ambiance et lisibilité de l’expérience joueur.
+            </p>
+        </div>
+
+        <div class="card">
+            <span class="card-icon">🧠</span>
+            <h3>Narration et Histoire : AADDI Amine</h3>
+            <p style="font-size:0.9rem; color:#aaa;">
+                Rédige l'histoire et code les phases de narrations pour permettre au joueur d'être immérgé dans l'univers. 
+            </p>
+        </div>
+
+
     </div>
-    <div class="team-grid">
-        <div class="member">
-            <div class="member-sprite">🧠</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Lead Developper</span>
-        </div>
-        <div class="member">
-            <div class="member-sprite">💻</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Network Developper</span>
-        </div>
-        <div class="member">
-            <div class="member-sprite">🎨</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Art & UI</span>
-        </div>
-        <div class="member">
-            <div class="member-sprite">👾</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Narration et histoire</span>
-        </div>
+
+    <div style="text-align:center; margin-top:4rem;">
+        <a href="index.html" class="btn">RETOUR À L’ARCHIVE</a>
     </div>
 </section>
 
 <footer>
-    <div style="margin-bottom: 2rem;">
-        <a href="./bibliographie.html" class="btn">BIBLIOGRAPHIE</a>
-    </div>
-    <p>&copy; 2025-2030 Greed PROJECT. Tous droits réservés.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem; opacity: 0.5;">Site web vitrine v1.2</p>
+    <p>&copy; 2025-2030 GREED PROJECT</p>
 </footer>
-
-<script>
-    const text = "Les étoiles ne brillent plus... c'est à nous d'allumer les feux. Préparez votre équipement, l'expédition part ce soir.";
-    const speed = 40;
-    let i = 0;
-    const target = document.getElementById("typewriter");
-
-    function typeWriter() {
-        if (i < text.length) {
-            target.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-        }
-    }
-
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(typeWriter, 800);
-    });
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-    
-    const mobileNav = document.querySelector('.mobile-nav');
-    if(mobileNav) {
-        mobileNav.addEventListener('click', () => {
-            alert("Menu mobile à implémenter en JS si besoin !");
-        });
-    }
-</script>
 
 </body>
 </html>
