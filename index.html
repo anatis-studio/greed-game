@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -33,24 +34,30 @@
             font-size: 1.3rem;
             line-height: 1.5;
             image-rendering: pixelated;
-            background-image: 
-                linear-gradient(335deg, rgba(0,0,0,0.4) 23px, transparent 23px),
-                linear-gradient(155deg, rgba(0,0,0,0.4) 23px, transparent 23px),
-                linear-gradient(335deg, rgba(0,0,0,0.4) 23px, transparent 23px),
-                linear-gradient(155deg, rgba(0,0,0,0.4) 23px, transparent 23px);
+            background-image:
+                linear-gradient(335deg, rgba(0, 0, 0, 0.4) 23px, transparent 23px),
+                linear-gradient(155deg, rgba(0, 0, 0, 0.4) 23px, transparent 23px),
+                linear-gradient(335deg, rgba(0, 0, 0, 0.4) 23px, transparent 23px),
+                linear-gradient(155deg, rgba(0, 0, 0, 0.4) 23px, transparent 23px);
             background-size: 58px 58px;
         }
 
         body::before {
             content: "";
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            box-shadow: inset 0 0 150px rgba(0,0,0,0.9);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            box-shadow: inset 0 0 150px rgba(0, 0, 0, 0.9);
             pointer-events: none;
             z-index: 900;
         }
 
-        h1, h2, h3, h4 {
+        h1,
+        h2,
+        h3,
+        h4 {
             font-family: 'Press Start 2P', cursive;
             text-transform: uppercase;
         }
@@ -78,7 +85,7 @@
             position: relative;
             letter-spacing: -2px;
         }
-        
+
         .logo::after {
             content: 'PROMO 2030';
             position: absolute;
@@ -150,10 +157,10 @@
         .rpg-dialog {
             background: linear-gradient(to bottom, #16213e, #0f1526);
             border: 3px solid #30475e;
-            box-shadow: 
+            box-shadow:
                 inset 0 0 0 2px #000,
                 0 0 0 2px #000,
-                0 10px 20px rgba(0,0,0,0.8);
+                0 10px 20px rgba(0, 0, 0, 0.8);
             padding: 2rem;
             width: 90%;
             max-width: 700px;
@@ -223,7 +230,7 @@
             background: rgba(10, 15, 30, 0.8);
             padding: 2.5rem;
             border: 1px solid #30475e;
-            box-shadow: 0 0 30px rgba(0,0,0,0.5);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
         }
 
         .mockup-window {
@@ -238,8 +245,9 @@
             width: 200%;
             height: 200%;
             position: absolute;
-            top: -50%; left: -50%;
-            background-image: 
+            top: -50%;
+            left: -50%;
+            background-image:
                 linear-gradient(30deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
                 linear-gradient(150deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
                 linear-gradient(30deg, #111 12%, transparent 12.5%, transparent 87%, #111 87.5%, #111),
@@ -316,7 +324,7 @@
             align-items: center;
             justify-content: center;
             font-size: 2rem;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         footer {
@@ -339,164 +347,217 @@
         }
 
         @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
         }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .lore-container { grid-template-columns: 1fr; }
-            nav { display: none; }
-            header { padding: 1rem; }
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .lore-container {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                display: none;
+            }
+
+            header {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <div class="logo">Greed</div>
-    <div style="display: none; color: white; font-size: 1.5rem;" class="mobile-nav">☰</div>
-    <nav>
-        <ul>
-            <li><a href="#lore">HISTOIRE</a></li>
-            <li><a href="#gameplay">MÉCANIQUES</a></li>
-            <li><a href="#dev">ÉQUIPE</a></li>
-        </ul>
-    </nav>
-</header>
-
-<section class="hero">
-    <h1>Greed</h1>
-    <div class="subtitle">PROJET ANNUEL S1-S2 • EPITA 2030</div>
-    <div class="rpg-dialog">
-        <span id="typewriter"></span><span class="cursor"></span>
-    </div>
-    <a href="#lore" class="btn">COMMENCER L'AVENTURE</a>
-</section>
-
-<section id="lore">
-    <div style="text-align: center;">
-        <h2 class="section-header">Le Monde d'Après</h2>
-    </div>
-    <div class="lore-container">
-        <div class="mockup-window">
-            <div class="iso-grid"></div>
-            <div style="position: absolute; top: 40%; left: 40%; width: 30px; height: 40px; background: #4facfe; box-shadow: 2px 2px 0 #000; border: 1px solid #fff;"></div>
-            <div style="position: absolute; top: 35%; left: 55%; width: 24px; height: 24px; background: #300; border: 1px solid #f00; box-shadow: 2px 2px 0 #000;"></div>
-            <div style="position: absolute; bottom: 10px; left: 10px; color: #aaa; font-size: 0.7rem; font-family: 'VT323';">Preversion v0.4.2</div>
-        </div>
-        <div>
-            <p style="color: #aaa; margin-bottom: 1rem;">Le seigneur n'est pas revenu de sa quête dans son état normal ... Désormais il détruit tout dans l'objectif de s'enrichir.</p>
-            <p style="color: #dcdcdc;">Dans <strong style="color: #4facfe;">Greed</strong>, bâtissez une lumière dans les ténèbres. Explorez des donjons en ruines, affrontez ce qui rôde dans l'ombre et reconstruisez une société sur les cendres de l'ancienne.</p>
-            <br>
-            <ul style="list-style: none; padding-left: 1rem; border-left: 3px solid #191970;">
-                <li style="margin-bottom: 0.8rem;">🌑 Cycle Jour/Nuit dynamique</li>
-                <li style="margin-bottom: 0.8rem;">🏰 Gestion de colonie survie</li>
-                <li>⚔️ Exploration isométrique</li>
+    <header>
+        <div class="logo">Greed</div>
+        <div style="display: none; color: white; font-size: 1.5rem;" class="mobile-nav">☰</div>
+        <nav>
+            <ul>
+                <li><a href="#lore">HISTOIRE</a></li>
+                <li><a href="#gameplay">MÉCANIQUES</a></li>
+                <li><a href="#dev">ÉQUIPE</a></li>
             </ul>
-        </div>
-    </div>
-</section>
+        </nav>
+    </header>
 
-<section id="gameplay">
-    <div style="text-align: center;">
-        <h2 class="section-header">Système de Jeu</h2>
-    </div>
-    <div class="features-grid">
-        <div class="card">
-            <span class="card-icon">🗝️</span>
-            <h3>Exploration</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Des donjons générés procéduralement. Chaque descente est une nouvelle épreuve où la carte est votre meilleure alliée.</p>
+    <section class="hero">
+        <h1>Greed</h1>
+        <div class="subtitle">PROJET ANNUEL S1-S2 • EPITA 2030</div>
+        <div class="rpg-dialog">
+            <span id="typewriter"></span><span class="cursor"></span>
         </div>
-        <div class="card">
-            <span class="card-icon">💎</span>
-            <h3>Ressources</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Collectez du fer et de l'or pour reconstruire le village et éspérer sauver le seigneur.</p>
-        </div>
-        <div class="card">
-            <span class="card-icon">🏗️</span>
-            <h3>Construction</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Reconstruisez un village pour vous améliorer vous et vos armes. Votre base est votre hub central, protégez-la à tout prix.</p>
-        </div>
-        <div class="card">
-            <span class="card-icon">🔮</span>
-            <h3>Évolution</h3>
-            <p style="font-size: 0.9rem; color: #aaa;">Faites évoluer le niveau de votre personnage pour découvrir un béstiaire riche et complet.</p>
-        </div>
-    </div>
-</section>
+        <a href="#lore" class="btn">COMMENCER L'AVENTURE</a>
+    </section>
 
-<section id="dev" class="epita-badge">
-    <h3>PROMO 2030 - EPITA</h3>
-    <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-        Projet de première année.<br>
-        Développé en python grace a pygame.
-    </p>
-    <div style="margin-top: 3rem; text-align: center;">
+    <section id="lore">
+        <div style="text-align: center;">
+            <h2 class="section-header">Le Monde d'Après</h2>
+        </div>
+        <div class="lore-container">
+            <div class="mockup-window"
+                style="background-image: url('donjon.png'); background-size: cover; background-position: center; image-rendering: pixelated;">
+                <div
+                    style="position: absolute; bottom: 10px; left: 10px; color: #aaa; font-size: 0.7rem; font-family: 'VT323'; background: rgba(0,0,0,0.6); padding: 2px 6px; border: 1px solid #333;">
+                    Preversion v0.4.2</div>
+            </div>
+            <div>
+                <p style="color: #aaa; margin-bottom: 1rem;">Le seigneur n'est pas revenu de sa quête dans son état
+                    normal ... Désormais il détruit tout dans l'objectif de s'enrichir.</p>
+                <p style="color: #dcdcdc;">Dans <strong style="color: #4facfe;">Greed</strong>, bâtissez une lumière
+                    dans les ténèbres. Explorez des donjons en ruines, affrontez ce qui rôde dans l'ombre et
+                    reconstruisez une société sur les cendres de l'ancienne.</p>
+                <br>
+                <ul style="list-style: none; padding-left: 1rem; border-left: 3px solid #191970;">
+                    <li style="margin-bottom: 0.8rem;">🌑 Cycle Jour/Nuit dynamique</li>
+                    <li style="margin-bottom: 0.8rem;">🏰 Gestion de colonie survie</li>
+                    <li style="margin-bottom: 0.8rem;">⚔️ Exploration isométrique</li>
+                    <li style="margin-bottom: 0.8rem;">🤝 Coopération multijoueur en temps réel</li>
+                    <li>💾 Persistance de l'univers (Sauvegardes)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="gameplay">
+        <div style="text-align: center;">
+            <h2 class="section-header">Système de Jeu</h2>
+        </div>
+        <div class="features-grid">
+            <div class="card">
+                <span class="card-icon">🗝️</span>
+                <h3>Exploration</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Des donjons générés procéduralement. Chaque descente est une
+                    nouvelle épreuve où la carte est votre meilleure alliée.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">💎</span>
+                <h3>Ressources</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Collectez du fer et de l'or pour reconstruire le village et
+                    éspérer sauver le seigneur.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🏗️</span>
+                <h3>Construction</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Reconstruisez un village pour vous améliorer vous et vos
+                    armes. Votre base est votre hub central, protégez-la à tout prix.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🔮</span>
+                <h3>Évolution</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Faites évoluer le niveau de votre personnage pour découvrir
+                    un béstiaire riche et complet.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">🤝</span>
+                <h3>Multijoueur</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Rejoignez vos amis en ligne pour explorer les donjons et
+                    survivre ensemble face aux dangers de la nuit.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">⚔️</span>
+                <h3>Arsenal</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Découvrez et équipez de nouvelles armes aux caractéristiques
+                    uniques pour repousser les ténèbres.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">👹</span>
+                <h3>Bestiaire & PNJ</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Affrontez des monstres redoutables aux comportements variés
+                    et interagissez avec les survivants.</p>
+            </div>
+            <div class="card">
+                <span class="card-icon">💾</span>
+                <h3>Persistance</h3>
+                <p style="font-size: 0.9rem; color: #aaa;">Votre progression, l'état de votre village et votre
+                    inventaire sont sauvegardés précieusement.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dev" class="epita-badge">
+        <h3>PROMO 2030 - EPITA</h3>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
+            Projet de première année.<br>
+            Développé en python grace a pygame.
+        </p>
+        <div style="margin-top: 3rem; text-align: center;">
             <a href="./roles.html" class="btn btn-secondary">EN SAVOIR PLUS</a>
-    </div>
-    <div class="team-grid">
-        <div class="member">
-            <div class="member-sprite">🧠</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Lead Developper</span>
         </div>
-        <div class="member">
-            <div class="member-sprite">💻</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Network Developper</span>
+        <div class="team-grid">
+            <div class="member">
+                <div class="member-sprite">🧠</div>
+                <span style="font-size: 0.8rem; color: #aaddff;">Lead Developper</span>
+            </div>
+            <div class="member">
+                <div class="member-sprite">💻</div>
+                <span style="font-size: 0.8rem; color: #aaddff;">Network Developper</span>
+            </div>
+            <div class="member">
+                <div class="member-sprite">🎨</div>
+                <span style="font-size: 0.8rem; color: #aaddff;">Art & UI</span>
+            </div>
+            <div class="member">
+                <div class="member-sprite">👾</div>
+                <span style="font-size: 0.8rem; color: #aaddff;">Narration et histoire</span>
+            </div>
         </div>
-        <div class="member">
-            <div class="member-sprite">🎨</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Art & UI</span>
-        </div>
-        <div class="member">
-            <div class="member-sprite">👾</div>
-            <span style="font-size: 0.8rem; color: #aaddff;">Narration et histoire</span>
-        </div>
-    </div>
-</section>
+    </section>
 
-<footer>
-    <div style="margin-bottom: 2rem;">
-        <a href="./bibliographie.html" class="btn">BIBLIOGRAPHIE</a>
-    </div>
-    <p style="color: #666">&copy; 2025-2030 Greed PROJECT. Tous droits réservés.</p>
-    <p style="margin-top: 0.5rem; font-size: 0.7rem; opacity: 1; color : #666;">Site web vitrine v1.2</p>
-</footer>
+    <footer>
+        <div style="margin-bottom: 2rem;">
+            <a href="./bibliographie.html" class="btn">BIBLIOGRAPHIE</a>
+        </div>
+        <p style="color: #666">&copy; 2025-2030 Greed PROJECT. Tous droits réservés.</p>
+        <p style="margin-top: 0.5rem; font-size: 0.7rem; opacity: 1; color : #666;">Site web vitrine v1.2</p>
+    </footer>
 
-<script>
-    const text = "Les étoiles ne brillent plus... c'est à nous d'allumer les feux. Préparez votre équipement, l'expédition part ce soir.";
-    const speed = 40;
-    let i = 0;
-    const target = document.getElementById("typewriter");
+    <script>
+        const text = "Les étoiles ne brillent plus... c'est à nous d'allumer les feux. Préparez votre équipement, l'expédition part ce soir, et vous ne serez pas seuls.";
+        const speed = 40;
+        let i = 0;
+        const target = document.getElementById("typewriter");
 
-    function typeWriter() {
-        if (i < text.length) {
-            target.textContent += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
+        function typeWriter() {
+            if (i < text.length) {
+                target.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, speed);
+            }
         }
-    }
 
-    document.addEventListener('DOMContentLoaded', () => {
-        setTimeout(typeWriter, 800);
-    });
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(typeWriter, 800);
+        });
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
             });
         });
-    });
-    
-    const mobileNav = document.querySelector('.mobile-nav');
-    if(mobileNav) {
-        mobileNav.addEventListener('click', () => {
-            alert("Menu mobile à implémenter en JS si besoin !");
-        });
-    }
-</script>
+
+        const mobileNav = document.querySelector('.mobile-nav');
+        if (mobileNav) {
+            mobileNav.addEventListener('click', () => {
+                alert("Menu mobile à implémenter en JS si besoin !");
+            });
+        }
+    </script>
 
 </body>
+
 </html>
